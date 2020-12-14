@@ -37,6 +37,7 @@ endef
 define Package/6in4/install
 	$(INSTALL_DIR) $(1)/lib/netifd/proto
 	$(INSTALL_BIN) ./files/6in4.sh $(1)/lib/netifd/proto/6in4.sh
+	$(INSTALL_CONF) ./files/6in4.user $(1)/etc/6in4.user
 endef
 
 $(eval $(call BuildPackage,6in4))
